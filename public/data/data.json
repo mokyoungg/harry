@@ -1,0 +1,68 @@
+{
+    "data":[
+        {
+            "id": 1,
+            "name": "해리포터와 마법사의 돌",
+            "ename": "Harry Potter And The Sorcerer's Stone",
+            "quotes": "It does not do to dwell on dreams and forget to live.",
+            "image": "https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_scaled,f_auto,q_auto,dpr_2,c_scale,w_405/v1553632916/pro_pbid_13746.jpg",
+            "trailer": "https://www.youtube.com/watch?v=VyHV0BRtdxo"
+        },
+        {
+            "id": 2,
+            "name": "해리포터와 비밀의 방",
+            "ename": "Harry Potter And The Chamber Of Secrets",
+            "quotes": "There is a plot, Harry Potter. A plot to make most terrible things happen at Hogwarts School of Witchcraft and Wizardry this year.",
+            "image": "https://64.media.tumblr.com/8416a4e1c138ef2261bb9572a4c06190/tumblr_o09a16ZVm11qzcmp3o2_500.png",
+            "trailer": "https://www.youtube.com/watch?v=1bq0qff4iF8"
+        },
+        {
+            "id": 3,
+            "name": "해리포터와 아즈카반의 죄수",
+            "ename": "Harry Potter And The Prisoner Of Azkaban",
+            "quotes": "'Welcome to the Knight Bus, emergency transport for the stranded witch or wizard. Just stick out your wand hand, step on board and we can take you anywhere you want to go.",
+            "image": "https://img1.od-cdn.com/ImageType-400/3450-1/E02/542/E0/%7BE02542E0-7769-41FB-8CA3-C8262175C8AE%7DImg400.jpg",
+            "trailer": "https://www.youtube.com/watch?v=1ZdlAg3j8nI"
+        },
+        {
+            "id": 4,
+            "name": "해리포터와 불의 잔",
+            "ename": "Harry Potter And The Goblet Of Fire",
+            "quotes": "There will be three tasks, spaced throughout the school year, and they will test the champions in many different ways...their magical prowess - their daring - their powers of deduction - and, of course, their ability to cope with danger.",
+            "image": "https://m.media-amazon.com/images/I/51Vjb2qJwzL.jpg",
+            "trailer": "https://www.youtube.com/watch?v=3EGojp4Hh6I"
+        },
+        {
+            "id": 5,
+            "name": "해리포터와 불사조 기사단",
+            "ename": "Harry Potter And The Order Of The Phoenix",
+            "quotes": "You are sharing the Dark Lord's thoughts and emotions. The Headmaster thinks it inadvisable for this to continue. He wishes me to teach you how to close your mind to the Dark Lord.",
+            "image": "https://m.media-amazon.com/images/I/51-SI2+aQ2L.jpg",
+            "trailer": "https://www.youtube.com/watch?v=y6ZW7KXaXYk"
+        },
+        {
+            "id": 6,
+            "name": "해리포터와 혼혈 왕자",
+            "ename": "Harry Potter And The Half-Blood Prince",
+            "quotes": "There it was, hanging in the sky above the school: the blazing green skull with a serpent tongue, the mark Death Eaters left behind whenever they had entered a building...wherever they had murdered....",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD-ZmM3flV_eVm8gAZPXQpv8b-t6iF1H8frA&usqp=CAU",
+            "trailer": "https://www.youtube.com/watch?v=sg81Lts5kYY"
+        },
+        {
+            "id": 7,
+            "name": "해리포터와 죽음의 성물 1부",
+            "ename": "Harry Potter And The Deathly Hallows: Part 1",
+            "quotes": "Give me Harry Potter,' said Voldemort's voice, 'and none shall be harmed. Give me Harry Potter, and I shall leave the school untouched. Give me Harry Potter, and you will be rewarded.",
+            "image": "https://m.media-amazon.com/images/I/81NEMbJJg8L.jpg",
+            "trailer": "https://www.youtube.com/watch?v=MxqsmsA8y5k"
+        },
+        {
+            "id": 8,
+            "name": "해리포터와 죽음의 성물 2부",
+            "ename": "Harry Potter And The Deathly Hallows: Part 2",
+            "quotes": "Do not pity the dead, Harry. Pity the living, and, above all those who live without love.",
+            "image": "https://i.pinimg.com/originals/27/b3/ee/27b3ee707374fbc648562d78a7e9ff79.jpg",
+            "trailer": "https://www.youtube.com/watch?v=5NYt1qirBWg&t=26s"
+        }
+    ]
+}
