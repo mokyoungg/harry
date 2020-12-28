@@ -1,39 +1,47 @@
 import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
 import TradingCard from "./TradingCard";
-
 import styled from "styled-components";
+import mockData from "../apis/mockData";
 
-import jsonData from "../apis/jsonData";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.scss";
 
 const CardList = () => {
-  const settings = {
-    //dots: true,
-    //infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
-
-  const [data, setData] = useState([]);
+  const [datas, setData] = useState([]);
 
   useEffect(() => {
     getData();
   }, []);
 
   const getData = async () => {
-    const response = await jsonData.get();
+    const response = await mockData.get();
     setData(response.data.data);
   };
 
-  console.log(data);
+  const renderList = () => {
+    if (!datas) {
+      return null;
+    } else {
+      return datas.map((data, key) => {
+        return (
+          <SwiperSlide>
+            <TradingCard data={data} key={data.id} />
+          </SwiperSlide>
+        );
+      });
+    }
+  };
+
   return (
     <Wrap>
-      <Slider {...settings}>
-        {data.map((data) => {
-          return <TradingCard data={data} />;
-        })}
-      </Slider>
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={3}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {renderList()}
+      </Swiper>
     </Wrap>
   );
 };
@@ -41,5 +49,7 @@ const CardList = () => {
 export default CardList;
 
 const Wrap = styled.div`
+  margin: 0 auto;
+  margin-top: 20px;
   width: 1000px;
 `;

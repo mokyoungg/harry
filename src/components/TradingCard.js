@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
+import Modal from "./Modal";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
@@ -11,12 +13,14 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 300,
   },
 });
 
-const TradingCard = () => {
+const TradingCard = ({ data }) => {
   const classes = useStyles();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Card className={classes.root}>
@@ -24,29 +28,44 @@ const TradingCard = () => {
         <CardMedia
           component="img"
           alt="img"
-          height="500"
-          image="https://res.cloudinary.com/bookbub/image/upload/t_ci_ar_6:9_scaled,f_auto,q_auto,dpr_2,c_scale,w_405/v1553632916/pro_pbid_13746.jpg"
-          //title="Contemplative Reptile"
+          image={data.image}
+          object-fit="fill"
+          height="500px"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Harry Potter And The Sorcerer's Stone
+            {data.ename}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            "It does not do to dwell on dreams and forget to live."
-          </Typography>
+          <QuotesWrap>{data.quotes}</QuotesWrap>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="primary" onClick={() => setIsOpen(true)}>
           Trailer
         </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
       </CardActions>
+      <Modal open={isOpen} onClose={() => setIsOpen(false)} data={data} />
     </Card>
   );
 };
 
 export default TradingCard;
+
+const QuotesWrap = styled.p`
+  height: 100px;
+  overflow: scroll;
+  margin-bottom: -30px;
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #dfdfdf;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+`;

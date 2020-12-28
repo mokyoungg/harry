@@ -2,7 +2,6 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import Video from "./Video";
 import CardList from "./CardList";
-import TradingCard from "./TradingCard";
 import styled from "styled-components";
 
 const App = () => {
@@ -12,6 +11,7 @@ const App = () => {
         <Video />
         <SearchBar />
       </ContentWrap>
+      <CardList />
     </Wrap>
   );
 };
