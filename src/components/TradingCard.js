@@ -19,7 +19,6 @@ const useStyles = makeStyles({
 
 const TradingCard = ({ data }) => {
   const classes = useStyles();
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
