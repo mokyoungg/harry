@@ -5,6 +5,9 @@ import Container from "@material-ui/core/Container";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 
+import { useDispatch } from "react-redux";
+import { chantSpell } from "../actions";
+
 const useStyles = makeStyles({
   container: {
     display: "flex",
@@ -16,6 +19,8 @@ const useStyles = makeStyles({
 const SearchBar = () => {
   const classes = useStyles();
 
+  const dispatch = useDispatch();
+
   const [spell, setSpell] = useState("");
 
   const inputHandler = (e) => {
@@ -24,10 +29,14 @@ const SearchBar = () => {
       setTimeout(() => {
         setSpell("그 이름을 말해선 안 돼");
       }, 2000);
-    } else if (e.target.value === "루모스") {
-      setSpell(e.target.value);
     } else {
       setSpell(e.target.value);
+    }
+  };
+
+  const keyPressHandler = (e) => {
+    if (e.keyCode === 13 || e.keyCode === 8) {
+      dispatch(chantSpell(spell));
     }
   };
 
@@ -38,6 +47,7 @@ const SearchBar = () => {
           id="standard-basic"
           label="Chant Spell"
           onChange={inputHandler}
+          onKeyDown={keyPressHandler}
           value={spell}
         />
       </Container>
@@ -64,7 +74,6 @@ const Wrap = styled.div`
     if (props.value === "볼드모트") {
       return css`
         animation: ${voldmort} 2s linear infinite;
-        //border: 2px solid red;
       `;
     } else if (props.value === "그 이름을 말해선 안 돼") {
       return css`

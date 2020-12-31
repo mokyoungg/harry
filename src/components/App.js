@@ -3,8 +3,11 @@ import SearchBar from "./SearchBar";
 import Video from "./Video";
 import CardList from "./CardList";
 import styled, { css } from "styled-components";
+import { useSelector } from "react-redux";
 
 const App = () => {
+  const spell = useSelector((state) => state.harryReducer.spell);
+
   const [location, setLocation] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
@@ -14,16 +17,17 @@ const App = () => {
 
   return (
     <Wrap onMouseMove={handleMouseMove}>
-      <ContentWrap>
+      <HeaderWrap>
         <Video />
         <SearchBar />
-      </ContentWrap>
+      </HeaderWrap>
       <CardList />
-      {/*
-      <Light
-        locationX={location.x + "px"}
-        locationY={location.y + "px"}
-    ></Light>*/}
+      {spell === "루모스" ? (
+        <Light
+          locationX={location.x + "px"}
+          locationY={location.y + "px"}
+        ></Light>
+      ) : null}
     </Wrap>
   );
 };
@@ -34,11 +38,10 @@ const Wrap = styled.div`
   width: 100%;
 `;
 
-const ContentWrap = styled.div`
+const HeaderWrap = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border: 1px solid red;
+  justify-content: flex-start;
   width: 450px;
   margin: 0 auto;
 `;
