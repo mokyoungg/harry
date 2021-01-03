@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "./Header";
 import SearchBar from "./SearchBar";
 import Video from "./Video";
 import CardList from "./CardList";
@@ -17,10 +18,11 @@ const App = () => {
 
   return (
     <Wrap onMouseMove={handleMouseMove}>
-      <HeaderWrap>
+      <Header />
+      <SearchWrap>
         <Video />
         <SearchBar />
-      </HeaderWrap>
+      </SearchWrap>
       <CardList />
       {spell === "루모스" ? (
         <Light
@@ -38,7 +40,7 @@ const Wrap = styled.div`
   width: 100%;
 `;
 
-const HeaderWrap = styled.div`
+const SearchWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
