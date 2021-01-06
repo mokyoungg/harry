@@ -8,6 +8,7 @@ export default createGlobalStyle`
         src: local('HarryFont'),
         url(${HarryFontWOFF}) format('woff');
         font-weight: 300;
-        font-style: normal
+        font-style: normal;
+        font-display: auto;
     }
 `;
