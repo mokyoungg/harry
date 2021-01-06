@@ -32,6 +32,7 @@ const Wrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 500px;
 `;
 
 const H1Font = styled.h1`
